@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Assets/Sounds/84122__skeetdawg__loudfan.wav" type="AudioStream" id=2]
+[ext_resource path="res://Assets/Sounds/Mouse Click - Sound Effect (HD).wav" type="AudioStream" id=3]
+[ext_resource path="res://Assets/Sounds/91926__tim-kahn__ding.wav" type="AudioStream" id=4]
+[ext_resource path="res://Global/Sound.gd" type="Script" id=5]
+
+[node name="Sound" type="Node2D"]
+pause_mode = 2
+script = ExtResource( 5 )
+
+[node name="Click" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+
+[node name="Background_fan" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+autoplay = true
+
+[node name="Day_change" type="AudioStreamPlayer" parent="."]
+
+[node name="Accept" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )

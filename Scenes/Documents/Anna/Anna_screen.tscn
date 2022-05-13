@@ -1,0 +1,216 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Assets/Sprites/Request_button.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Sprites/Setting_button-export.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Sprites/Return_button-export.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Sprites/Report_button.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Sprites/Morning-export.png" type="Texture" id=5]
+[ext_resource path="res://Scenes/Documents/Anna/Anna_screen.gd" type="Script" id=6]
+[ext_resource path="res://Scenes/Settings/Settings_screen.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Main/Report_screen.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/Main/Request_screen.tscn" type="PackedScene" id=9]
+
+[node name="Anna_screen" type="Control" groups=[
+"update_font",
+]]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+Report = ExtResource( 8 )
+Get_info = ExtResource( 9 )
+Settings = ExtResource( 7 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Buttons" type="Node" parent="."]
+
+[node name="Settings" type="TextureButton" parent="Buttons"]
+margin_left = 816.0
+margin_top = 552.0
+margin_right = 944.0
+margin_bottom = 594.0
+texture_normal = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Settings_label" type="Label" parent="Buttons"]
+margin_left = 824.0
+margin_top = 560.0
+margin_right = 936.0
+margin_bottom = 584.0
+custom_colors/font_color = Color( 0.211765, 0.968627, 0.184314, 1 )
+text = "SETTINGS"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Return" type="TextureButton" parent="Buttons"]
+margin_left = 856.0
+margin_top = 24.0
+margin_right = 952.0
+margin_bottom = 120.0
+rect_scale = Vector2( 0.75, 0.75 )
+texture_normal = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Time" type="Node" parent="."]
+
+[node name="Sprite" type="Sprite" parent="Time"]
+position = Vector2( 50.5, 50.5 )
+texture = ExtResource( 5 )
+
+[node name="Current_time" type="Label" parent="Time"]
+margin_left = 112.0
+margin_top = 32.0
+margin_right = 224.0
+margin_bottom = 46.0
+custom_colors/font_color = Color( 0.211765, 0.968627, 0.184314, 1 )
+text = "DAY 1: MORNING"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Period_time" type="Label" parent="Time"]
+margin_left = 112.0
+margin_top = 71.9999
+margin_right = 224.0
+margin_bottom = 85.9999
+custom_colors/font_color = Color( 0.211765, 0.968627, 0.184314, 1 )
+text = "30S UNTIL NOON"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Main_functions" type="Node" parent="."]
+
+[node name="Report" type="TextureButton" parent="Main_functions"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -200.0
+margin_top = 16.0
+margin_right = 248.0
+margin_bottom = 104.0
+texture_normal = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Request" type="TextureButton" parent="Main_functions"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -144.0
+margin_top = 120.0
+margin_right = 80.0
+margin_bottom = 164.0
+rect_scale = Vector2( 1.5, 1.5 )
+texture_normal = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Report_label" type="Label" parent="Main_functions"]
+margin_left = 296.0
+margin_top = 32.0
+margin_right = 712.0
+margin_bottom = 88.0
+custom_colors/font_color = Color( 0.211765, 0.968627, 0.184314, 1 )
+text = "REPORT"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Request_label" type="Label" parent="Main_functions"]
+margin_left = 352.0
+margin_top = 136.0
+margin_right = 656.0
+margin_bottom = 168.0
+custom_colors/font_color = Color( 0.211765, 0.968627, 0.184314, 1 )
+text = "REQUEST INFORMATION"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+margin_left = 128.0
+margin_top = 248.0
+margin_right = 832.0
+margin_bottom = 512.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+margin_right = 640.0
+margin_bottom = 109.0
+custom_constants/separation = 30
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer"]
+margin_right = 640.0
+margin_bottom = 65.0
+rect_min_size = Vector2( 640, 0 )
+custom_colors/font_color = Color( 0.211765, 0.968627, 0.184314, 1 )
+text = "+ An old woman immigrant from Eurasia in her 80s. 
++ She is a widow who lost her husband in the recent war and just recently moved here. 
++ Now either hangs out at the communal apartment or the streets below the apartment. She is too weak to even go to the public park. "
+autowrap = true
+
+[node name="Label2" type="Label" parent="ScrollContainer/VBoxContainer"]
+margin_top = 95.0
+margin_right = 640.0
+margin_bottom = 109.0
+rect_min_size = Vector2( 640, 0 )
+custom_colors/font_color = Color( 0.211765, 0.968627, 0.184314, 1 )
+text = "(Further information must be requested)"
+autowrap = true
+
+[node name="Request_progress" type="Label" parent="."]
+margin_left = 360.0
+margin_top = 544.0
+margin_right = 656.0
+margin_bottom = 558.0
+custom_colors/font_color = Color( 0.211765, 0.968627, 0.184314, 1 )
+text = "REQUEST PROGRESS:"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Request_progress_2" type="Label" parent="Request_progress"]
+margin_top = 24.0
+margin_right = 296.0
+margin_bottom = 38.0
+custom_colors/font_color = Color( 0.211765, 0.968627, 0.184314, 1 )
+text = "0%"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Buttons/Settings" to="." method="_on_Settings_pressed"]
+[connection signal="pressed" from="Buttons/Return" to="." method="_on_Return_pressed"]
+[connection signal="pressed" from="Main_functions/Report" to="." method="_on_Report_pressed"]
+[connection signal="pressed" from="Main_functions/Request" to="." method="_on_Request_pressed"]

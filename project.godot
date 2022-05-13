@@ -1,0 +1,54 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Control",
+"class": "Base",
+"language": "GDScript",
+"path": "res://Scenes/Base_screen.gd"
+} ]
+_global_script_class_icons={
+"Base": ""
+}
+
+[application]
+
+config/name="Gwj# 36 - Uncontrollable Growth"
+run/main_scene="res://Scenes/Menus/Start_screen.tscn"
+boot_splash/image="res://Assets/Sprites/Boot_up icon.png"
+config/icon="res://icon.png"
+
+[autoload]
+
+Global="*res://Global/Global.tscn"
+Endings="*res://Global/Endings.tscn"
+Sound="*res://Global/Sound.tscn"
+
+[display]
+
+window/size/width=960
+window/stretch/mode="viewport"
+window/stretch/aspect="keep"
+
+[input]
+
+click={
+"deadzone": 0.5,
+"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":1,"pressed":false,"doubleclick":false,"script":null)
+ ]
+}
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+2d/snapping/use_gpu_pixel_snap=true

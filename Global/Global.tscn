@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Global/Global.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Menus/End_screen.tscn" type="PackedScene" id=4]
+
+[node name="Global" type="Node2D"]
+script = ExtResource( 1 )
+Ending = ExtResource( 4 )
+
+[node name="Period_timer" type="Timer" parent="."]
+process_priority = 31
+wait_time = 25.0
+autostart = true
+
+[node name="Request_timer" type="Timer" parent="."]
+wait_time = 35.0
+
+[connection signal="timeout" from="Period_timer" to="." method="_on_Period_timer_timeout"]
+[connection signal="timeout" from="Request_timer" to="." method="_on_Request_timer_timeout"]
